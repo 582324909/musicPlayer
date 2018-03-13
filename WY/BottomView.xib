@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="BottomView">
+            <rect key="frame" x="0.0" y="0.0" width="575" height="100"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kNh-41-lVi">
+                    <rect key="frame" x="257.5" y="50" width="60" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="60" id="o5D-z6-edu"/>
+                        <constraint firstAttribute="height" constant="40" id="r6e-pG-qSo"/>
+                    </constraints>
+                    <state key="normal" title="播放"/>
+                    <connections>
+                        <action selector="playClick:" destination="iN0-l3-epB" eventType="touchUpInside" id="Snx-UQ-4VN"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l5w-Ou-QLd">
+                    <rect key="frame" x="117.5" y="50" width="60" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="60" id="2cv-7h-HAn"/>
+                        <constraint firstAttribute="height" constant="40" id="DiV-8z-Csn"/>
+                    </constraints>
+                    <state key="normal" title="上一首"/>
+                </button>
+                <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="tRn-sH-Oql">
+                    <rect key="frame" x="83" y="0.0" width="409" height="31"/>
+                </slider>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rkn-JT-0Qk">
+                    <rect key="frame" x="10" y="4" width="60" height="20"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="20" id="EE5-mx-uel"/>
+                        <constraint firstAttribute="width" constant="60" id="ocx-W4-QcP"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XAF-da-U7h">
+                    <rect key="frame" x="505" y="4" width="60" height="20"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="20" id="eGO-nh-bmr"/>
+                        <constraint firstAttribute="width" constant="60" id="pwx-kk-Wli"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9ke-dm-wWI">
+                    <rect key="frame" x="397.5" y="50" width="60" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="60" id="SBH-h8-CiA"/>
+                        <constraint firstAttribute="height" constant="40" id="YmU-45-a95"/>
+                    </constraints>
+                    <state key="normal" title="下一首"/>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="9ke-dm-wWI" firstAttribute="top" secondItem="kNh-41-lVi" secondAttribute="bottom" constant="-40" id="80J-l6-Moa"/>
+                <constraint firstItem="9ke-dm-wWI" firstAttribute="leading" secondItem="kNh-41-lVi" secondAttribute="trailing" constant="80" id="Auv-XF-SiX"/>
+                <constraint firstItem="tRn-sH-Oql" firstAttribute="leading" secondItem="rkn-JT-0Qk" secondAttribute="trailing" constant="15" id="Fl6-6F-qCo"/>
+                <constraint firstItem="kNh-41-lVi" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="HI6-aa-4qK"/>
+                <constraint firstItem="kNh-41-lVi" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" constant="-10" id="KID-5R-JJ9"/>
+                <constraint firstItem="rkn-JT-0Qk" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="4" id="O51-U1-jfN"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="XAF-da-U7h" secondAttribute="trailing" constant="10" id="P24-OM-HTD"/>
+                <constraint firstItem="XAF-da-U7h" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="4" id="YzR-0G-H5c"/>
+                <constraint firstItem="kNh-41-lVi" firstAttribute="leading" secondItem="l5w-Ou-QLd" secondAttribute="trailing" constant="80" id="bYk-7u-tX7"/>
+                <constraint firstItem="l5w-Ou-QLd" firstAttribute="top" secondItem="kNh-41-lVi" secondAttribute="bottom" constant="-40" id="eVt-2Q-3q8"/>
+                <constraint firstItem="rkn-JT-0Qk" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="10" id="iFK-Q8-ufp"/>
+                <constraint firstItem="XAF-da-U7h" firstAttribute="leading" secondItem="tRn-sH-Oql" secondAttribute="trailing" constant="15" id="qqK-Gh-qH8"/>
+                <constraint firstItem="tRn-sH-Oql" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="vSi-2p-YYP"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="musicSlider" destination="tRn-sH-Oql" id="PyJ-fe-y3Z"/>
+                <outlet property="playButton" destination="kNh-41-lVi" id="Izy-qx-Xgh"/>
+                <outlet property="progressTime" destination="rkn-JT-0Qk" id="YH8-N1-wdq"/>
+                <outlet property="totalTime" destination="XAF-da-U7h" id="684-kG-Rd8"/>
+            </connections>
+            <point key="canvasLocation" x="-9.5" y="386"/>
+        </view>
+    </objects>
+</document>
